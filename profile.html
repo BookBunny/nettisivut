@@ -31,6 +31,15 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+ul
+{
+list-style-type: none;
+}
+
 </style> 
 </head>
 <body>
@@ -67,8 +76,38 @@ img {
         <div class="row">
 
             <div class="col-sm-8" style="background-color: rgb(237, 226, 220);">
-                profiili sivu on meinaa
-            </div>
+            <br>
+            <div>
+                <form action="/my-handling-form-page" method="post">
+                    <ul>
+                     <li>
+                       <label for="name">Name:</label>
+                       <input type="text" id="name" name="user_name">
+                       
+                     </li>
+                     <li>
+                       <label for="mail">Age:</label>
+                       <input type="email" id="mail" name="user_email">
+                     </li>
+                     <li>
+                       <label for="msg">Species:</label>
+                       <input id="msg" name="user_message"></input>
+                     </li>
+                     <li>
+                        <label for="msg">Likes/Dislikes:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                      </li>
+                      <li>
+                        <label for="msg">About me:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                      </li>
+                    </ul>
+<input type="submit" value="Save changes">
+
+                   </form>
+                </div>
+           
+        </div>
             <div class="col-sm-4" style="background-color: rgb(186, 178, 181); min-height: 800px;align-items: center;">
                 <a href="https://www.goodreads.com/user/show/9632748-book-bunny" target="_blank" rel="noopener noreferrer">
                     <img src="images/ad22.png"> 
