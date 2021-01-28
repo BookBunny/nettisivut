@@ -36,6 +36,36 @@ img {
   color: white;
   
 }
+.beam{
+  width: 8px;
+  height: 2000px;
+  position: absolute;
+  background: red;
+  box-shadow: 0px 0px 40px 10px red;
+  display: none;
+}
+.bottom-light{
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 100%;
+  position: fixed;
+  background-color: #fff;
+  box-shadow:
+    0px 0px 10px 10px white,
+    0px 0px 30px 30px red,
+    0px 100px 100px 100px rgba(255, 0, 0, .3);
+}
+
+
+
+#disco-ball{
+  max-width: 60px;
+  position: absolute;
+  display: none;
+  user-select: none;
+}
+
 </style> 
 </head>
 <body>
@@ -74,11 +104,25 @@ img {
      
                 
               <h2>Settings</h2><br>
+            
+              <div id="container">
+                <input type="checkbox" id="switch"  onclick="startParty()">Switch to Night Party Mode (Can't be turned off)</input><br><br>
+              </div>
+              
+              <div id="beam0" class="beam"></div>
+              <div id="beam1" class="beam"></div>
+              <div id="beam2" class="beam"></div>
+              <div id="beam3" class="beam"></div>
+              <div id="beam4" class="beam"></div>
+              <div id="beam5" class="beam"></div>
+              <div id="beam6" class="beam"></div>
+              <div id="beam7" class="beam"></div>
+              
+              <img id="disco-ball" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/94930/dancer.png"/>
               <input type="checkbox" onclick="adultcontent()"> Adult content</input><br><br>
               <input type="checkbox" id="option1" name="option1" value="on">
               <label for="option1">Push notifications</label><br><br>
-              <input type="checkbox" id="option1" name="option1" value="on">
-              <label for="option1">Party mode</label><br><br>
+           
               <input type="checkbox" onclick="nightmode()"> Toggle dark mode</input>
               <script>
                 function nightmode() {
@@ -86,6 +130,8 @@ img {
                    element.classList.toggle("dark-mode");
                 }
                 </script>
+              <script src="party.js"></script>
+       
             </div>
             <div class="col-sm-4" style=" min-height: 800px;align-items: center;">
             <a href="https://store.steampowered.com/app/1223580/Blush_Blush__18_Uncut_DLC/" target="_blank" rel="noopener noreferrer">
