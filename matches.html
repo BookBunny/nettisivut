@@ -31,6 +31,71 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+h1{
+ text-align: center;
+}
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container {
+  border: 2px solid #dedede;
+  background-color:rgb(18,60,105);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  color: white;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color:rgb(172, 59, 97);
+  color: white;
+}
+
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+
+.time-left {
+  float: left;
+  color: #999;
+}
+textarea{
+  width: 100%;
+}
 </style> 
 </head>
 <body>
@@ -64,15 +129,92 @@ img {
               </nav>
         </div>
         <div class="row">
+          <div class="column">
+            <h1>Matches</h1>
+               
+                <table style="width: 100%;">
+                
+                  <tr>
+                    <td><img src="images/blin kot.png" height="85px" width="85px"></td>
+                    <td>Roosevelt</td>
+               
+                  </tr>
+                  <tr>
+                    <td><img src="images/kani.png" height="85px" width="85px"></td>
+                    <td>Edward</td>
+                  
+                  </tr>
+                  <tr>
+                    <td><img src="images/kisse.jpg" height="85px" width="85px"></td>
+                    <td>Tero</td>
+                    
+                  </tr> 
+                  <tr>
+                    <td><img src="images/xddd.jpg" height="85px" width="85px"></td>
+                    <td>Jackson Five</td>
+                   
+                  </tr>
+                  <tr>
+                    <td><img src="images/kiisu.png" height="85px" width="85px"></td>
+                    <td>Cobain</td>
+                   
+                  </tr>
+                  <tr>
+                    <td><img src="images/tonytiger.jpg" height="85px" width="85px"></td>
+                    <td>Tony The Tiger</td>
+                   
+                  </tr>
+                  <tr>
+                    <td><img src="images/wtf.jpg" height="85px" width="85px"></td>
+                    <td>Beelzebub</td>
+                   
+                  </tr>
+                  <tr>
+                    <td><img src="images/peukku22.png" height="85px" width="85px"></td>
+                    <td>Niilo22</td>
+                   
+                  </tr>
+                </table>
 
-            <div class="col-sm-8" style="background-color: rgb(237, 226, 220);">
-                ei matcheja lmao
+          </div>
+          <div class="column">
+            <h2>Tony The Tiger</h2>
+            <div class="container">
+              <img src="images/tonytiger.jpg" alt="Avatar">
+              <p>Wanna see my Frosties? 
+                They're GRRREAT!</p>
+              <span class="time-right">11:00</span>
             </div>
-            <div class="col-sm-4" style="background-color: rgb(186, 178, 181); min-height: 800px;align-items: center;">
+            
+            <div class="container darker">
+              <img src="images/shovel.jpg" alt="Avatar" class="right">
+              <p>I know something else I'd rather see ;)</p>
+              <span class="time-left">11:01</span>
+            </div>
+            
+            <div class="container">
+              <img src="images/tonytiger.jpg" alt="Avatar">
+              <p>Sweet! So you wanna hook up tonight? grrrr ;P</p>
+              <span class="time-right">11:02</span>
+            </div>
+            
+            <div class="container darker">
+              <img src="images/shovel.jpg" alt="Avatar" class="right">
+              <p>yes daddy <3</p>
+              <span class="time-left">11:05</span>
+            </div>
+            
+            <textarea id="msg" name="user_message"></textarea><br>
+            <input type="submit" value="Send"> <br>
+
+          </div>
+          <div class="column">
             <a href="https://www.youtube.com/c/JustSamu" target="_blank" rel="noopener noreferrer">
               <img src="images/ad1.png">
               </a>
             </div>
+          </div>
+        </div>
         <div class="row" style="background-color: rgb(172, 59, 97);color:rgb(white);margin-top: 5px; text-align: center; margin:auto">
             <div class="col-sm-4" style="background-color: rgb(172, 59, 97);" >
                 <h6><a href="contact.html"> Contact us</a></h6>
