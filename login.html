@@ -87,14 +87,14 @@ list-style-type: none;
     <div class="row">
       <div  data-focus-guard="true" tabindex="1" class="col-sm-8" style="background-color: rgb(237, 226, 220);">
         <h1> Log in:</h1>
-        <form action="/my-handling-form-page" method="post">
+        <form action="login.php" method="post">
             <ul>
              <li>
                <label for="name">Username:</label>
                <input tabindex="1" type="text" id="name" name="user_name">
                <label for="mail">Password:</label>
-               <input tabindex="2" type="email" id="mail" name="user_email">
-                 <input type="submit" value="Log in.">
+               <input tabindex="2" type="password" id="password" name="user_email">
+                 <input type="submit" value="Log in">
              </li>
             </ul>
 
