@@ -30,9 +30,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-  h2{
-    text-align: center;
+
   }
   article{
     text-align: left;
@@ -45,6 +43,10 @@
  a {
   color: white;
   text-decoration: none;
+}
+ul
+{
+list-style-type: none;
 }
   </style> 
 </head>
@@ -83,10 +85,28 @@
     </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-8" style="background-color: rgb(237, 226, 220);">
-        <article>
-          Inquiries to this email thx dicok14332@laklica.com
-      </article>
+      <div  data-focus-guard="true" tabindex="1" class="col-sm-8" style="background-color: rgb(237, 226, 220);">
+        <h1> Create new account:</h1>
+        <form action="login.php" method="post"> <!--Tähän vaihdetaan php tiedosto-->
+            <ul>
+                <li>
+                    <label for="mail">Name:</label>
+                        <input tabindex="1" type="text" id="name" name="name">
+                    </li>
+             <li>
+               <label for="name">Username:</label>
+                 <input tabindex="2" type="text" id="user_name" name="user_name">
+               </li>
+               <li>
+               <label for="mail">Password:</label>
+                 <input tabindex="3" type="password" id="password" name="password">
+               </li>              
+               <li>
+                   <br>
+                                                   <input type="submit" value="Create Account"> <!--Tähän nappiin tietokantaan kirjoitus-->
+             </li>
+            </ul>
+
       </div>
 
       <div class="row" style="background-color: rgb(172, 59, 97);color:rgb(white);margin-top: 5px; text-align: center;">
@@ -105,3 +125,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>    
 </body>
 </html>
+

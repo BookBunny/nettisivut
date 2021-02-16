@@ -5,85 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furry Tinder™</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<style>
-    body{
-    background-color: rgb(238, 226, 220);
-    font-family:'Times New Roman', Times, serif;
-    font-size: inherit;
-    color: black;
-    width: auto;
-}
-.navbar-nav > li{
-  padding: 2px;
-  padding-right:20px;
-  font-size:27px;
-}
-.topnav input[type=text] {
-  float: right;
-  padding: 6px;
-  border: none;
-  margin-top: 8px;
-  margin-right: 16px;
+    <style>
+      body{
+      background-color: rgb(238, 226, 220);
+      font-family:'Times New Roman', Times, serif;
+      font-size: inherit;
+      color: black;
+      
+  }
+  .navbar-light .navbar-nav .nav-link ,h6 {
+  color: white;
   font-size: 17px;
 }
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  .topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    width: auto;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h2{
+    text-align: center;
+  }
+  article{
+    text-align: left;
+    margin-left: 100px;
+  }
+  table{
+    align-items: center;
+    margin:0 auto;
+  }
+ a {
+  color: white;
+  text-decoration: none;
 }
-</style> 
+  </style> 
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row" style="margin-bottom: 5px;">
-            <nav class="navbar navbar-expand-sm  navbar-dark" style="background-color: rgb(172, 59, 97); color:blueviolet;">
-                <a class="navbar-brand" href="mainpage.html" ><img src= images/logo.png width="60px" height="60px"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                          <a class="nav-link" href="https://bookbunny.github.io/nettisivut/profile">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="https://bookbunny.github.io/nettisivut/matches">Matches</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="https://bookbunny.github.io/nettisivut/Premium">Furry Tinder Premium</a>
-                        </li>   
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://bookbunny.github.io/nettisivut/settings">Settings</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="https://bookbunny.github.io/nettisivut/signout">Sign Out</a>
-                          </li> 
-                      </ul>
-                  <input type="text" placeholder="Search..">
-                </div>  
-              </nav>
+    
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid" style="background-color: rgb(172, 59, 97); color:blueviolet;">
+          <a class="navbar-brand" href="mainpage.html" ><img src= images/logo.png width="60px" height="60px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="https://bookbunny.github.io/nettisivut/profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://bookbunny.github.io/nettisivut/matches">Matches</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://bookbunny.github.io/nettisivut/Premium">Furry Tinder Premium</a>
+                </li>   
+                <li class="nav-item">
+                    <a class="nav-link" href="https://bookbunny.github.io/nettisivut/settings">Settings</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://bookbunny.github.io/nettisivut/signout">Sign Out</a>
+                  </li> 
+              </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+ 
+          </form>
         </div>
-        <div class="row">
-
-            <div class="col-sm-8" style="background-color: rgb(237, 226, 220);">
-                Terms of service 
-            </div>
-            <div class="col-sm-4" style="background-color: rgb(186, 178, 181); min-height: 800px;align-items: center;">
-            <a href="https://www.youtube.com/c/JustSamu" target="_blank" rel="noopener noreferrer">
-              <img src="images/ad1.png">
-              </a>
-            </div>
-        <div class="row" style="background-color: rgb(172, 59, 97);color:rgb(white);margin-top: 5px; text-align: center; margin:auto">
-            <div class="col-sm-4" style="background-color: rgb(172, 59, 97);" >
-                <h6><a href="contact.html"> Contact us</a></h6>
-               </div>
-               <div class="col-sm-4" style="background-color: rgb(172, 59, 97);" >
-                <h6> Copyright 2021 corona</h6>
-               </div>
-               <div class="col-sm-4" style="background-color:rgb(172, 59, 97);" >
-                <h6><a href="tos.html"> Terms of Service</a></a></h6>
-               </div>
-        </div>
+      </div>
+    </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8" style="background-color: rgb(237, 226, 220);">
+        <article><h1>Website Terms and Conditions of Use</h1>
+        1. Terms
+        By accessing this Website, accessible from bookbunny.github.io, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.
+        <br>
+        <br>
+        2. Use License
+        Permission is granted to temporarily download one copy of the materials on Furry Tinder's Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
         
+        modify or copy the materials;
+        use the materials for any commercial purpose or for any public display;
+        attempt to reverse engineer any software contained on Furry Tinder's Website;
+        remove any copyright or other proprietary notations from the materials; or
+        transferring the materials to another person or "mirror" the materials on any other server.
+        This will let Furry Tinder to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format. These Terms of Service has been created with the help of the Terms Of Service Generator and the Privacy Policy Generator.
+        <br>
+        <br>
+        3. Disclaimer
+        All the materials on Furry Tinder’s Website are provided "as is". Furry Tinder makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, Furry Tinder does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.
+        <br>
+        <br>
+        4. Limitations
+        Furry Tinder or its suppliers will not be hold accountable for any damages that will arise with the use or inability to use the materials on Furry Tinder’s Website, even if Furry Tinder or an authorize representative of this Website has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.
+        <br>
+        <br>
+        5. Revisions and Errata
+        The materials appearing on Furry Tinder’s Website may include technical, typographical, or photographic errors. Furry Tinder will not promise that any of the materials in this Website are accurate, complete, or current. Furry Tinder may change the materials contained on its Website at any time without notice. Furry Tinder does not make any commitment to update the materials.
+        <br>
+        <br>
+        6. Links
+        Furry Tinder has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by Furry Tinder of the site. The use of any linked website is at the user’s own risk.
+        <br>
+        <br>
+        7. Site Terms of Use Modifications
+        Furry Tinder may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.
+        <br>
+        <br>
+        8. Your Privacy
+        Please read our Privacy Policy.
+        <br>
+        <br>
+        9. Governing Law
+        Any claim related to Furry Tinder's Website shall be governed by the laws of vi without regards to its conflict of law provisions. 
+      </article>
+      </div>
+
+      <div class="row" style="background-color: rgb(172, 59, 97);color:rgb(white);margin-top: 5px; text-align: center;">
+          <div class="col-sm-4" style="background-color: rgb(172, 59, 97);" >
+              <h6><a href="contact.html"> Contact us</a></h6>
+             </div>
+             <div class="col-sm-4" style="background-color: rgb(172, 59, 97);" >
+              <h6> Copyright 2021 corona</h6>
+             </div>
+             <div class="col-sm-4" style="background-color:rgb(172, 59, 97);" >
+              <h6><a href="tos.html"> Terms of Service</a></a></h6>
+             </div>
+      </div>
+
+ </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>    
 </body>
 </html>
