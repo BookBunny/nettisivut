@@ -16,7 +16,7 @@ $sql="select * from poj_users where username=? and password=md5(?)";
 $stmt=mysqli_prepare($yhteys, $sql);
 mysqli_stmt_bind_param($stmt, "ss", $username. $password);
 mysqli_execute($stmt);
-$tulos_mysqli_stmt_get_result($stmt);
+$tulos=mysqli_stmt_get_result($stmt);
 
 if ($rivi=mysqli_fetch_object($tulos)){
     $_SESSION["user_ok"]="ok";
