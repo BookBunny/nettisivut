@@ -5,7 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furry Tinder™</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <style>
+    <script>
+
+function sendData(form){
+var tunnukset=new Object();
+tunnukset.username=form.username.value;
+tunnukset.password=form.password.value;
+
+var x=JSON.stringify(tunnukset);
+
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function(){
+if (this.readyState == 4 && this.status == 200) {
+	document.getElementById("result").innerHTML = this.responseText;
+	}
+	};
+	xmlhttp.open("POST", "signincheck.php", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send("tunnukset=" + x);
+}
+</script>
+
+	<style>
       body{
       background-color: rgb(238, 226, 220);
       font-family:'Times New Roman', Times, serif;
@@ -87,26 +108,27 @@ list-style-type: none;
     <div class="row">
       <div  data-focus-guard="true" tabindex="1" class="col-sm-8" style="background-color: rgb(237, 226, 220);">
         <h1> Create new account:</h1>
-        <form action="login.php" method="post"> <!--Tähän vaihdetaan php tiedosto-->
+        <form action="signincheck.php" method="post" id="tunnukset"> <!--Tähän vaihdetaan php tiedosto-->
             <ul>
                 <li>
-                    <label for="mail">Name:</label>
+                    <label for="name">Name:</label>
                         <input tabindex="1" type="text" id="name" name="name">
                     </li>
              <li>
                <label for="name">Username:</label>
-                 <input tabindex="2" type="text" id="user_name" name="user_name">
+                 <input tabindex="2" type="text" id="username" name="username">
                </li>
                <li>
-               <label for="mail">Password:</label>
+               <label for="password">Password:</label>
                  <input tabindex="3" type="password" id="password" name="password">
                </li>              
                <li>
                    <br>
-                                                   <input type="submit" value="Create Account"> <!--Tähän nappiin tietokantaan kirjoitus-->
+                                                   <input type='button' name='ok' value='OK' onclick='sendData(this.form);'> 
              </li>
             </ul>
-
+</form>
+<p id="result">asdasd</p>
       </div>
 
       <div class="row" style="background-color: rgb(172, 59, 97);color:rgb(white);margin-top: 5px; text-align: center;">
@@ -125,4 +147,3 @@ list-style-type: none;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>    
 </body>
 </html>
-
