@@ -1,6 +1,6 @@
 <?php
 
-$json=$_POST["tunnukset"];
+$json=$_POST["elina19161_tunnukset"];
 $tunnukset=json_decode($json, false);
 
 $username = $tunnukset->username;
@@ -28,7 +28,7 @@ if  (!$tietokanta) {
 }
 
 #jos tietokantaan saadaan yhteys, tallennetaan tiedot valittuun tietokantaan.
-$sql="insert into elina19161_tunnukset(username, password) values (?,md5(?))";
+$sql="insert into elina19161_tunnukset(username, password) values (?,?)";
 $stmt=mysqli_prepare($yhteys, $sql);
 mysqli_stmt_bind_param($stmt, "ss", $username, $password);
 mysqli_stmt_execute($stmt);
