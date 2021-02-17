@@ -16,7 +16,7 @@ var x=JSON.stringify(tunnukset);
 
 xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function(){
-if (this.readyState == 4 && this.status == 200 {
+if (this.readyState == 4 && this.status == 200) {
 	document.getElementById("result").innerHTML = this.responseText;
 	}
 	};
@@ -116,7 +116,7 @@ list-style-type: none;
                     </li>
              <li>
                <label for="name">Username:</label>
-                 <input tabindex="2" type="text" id="username" name="user_name">
+                 <input tabindex="2" type="text" id="username" name="username">
                </li>
                <li>
                <label for="password">Password:</label>
@@ -124,10 +124,11 @@ list-style-type: none;
                </li>              
                <li>
                    <br>
-                                                   <input type='button' name='ok' value='OK' onclick='sendData(this.form);'> <!--Tähän nappiin tietokantaan kirjoitus-->
+                                                   <input type='button' name='ok' value='OK' onclick='sendData(this.form);'> 
              </li>
             </ul>
-
+</form>
+<p id="result">asdasd</p>
       </div>
 
       <div class="row" style="background-color: rgb(172, 59, 97);color:rgb(white);margin-top: 5px; text-align: center;">
