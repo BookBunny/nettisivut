@@ -1,11 +1,9 @@
 <?php
 session_start();
-if (!isset($_SESSION["user_ok"])){
-	$_SESSION["paluuosoite"]="logincheck.php";
-	header("Location:login.php");
-	exit;
+if (isset($_SESSION["user"])){
+    print "JEE";
 }
-
-print "xd";
-header("Location:profile.html");
+else{
+    print "XD TYPO";
+}
 ?>

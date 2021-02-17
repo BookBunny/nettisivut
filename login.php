@@ -10,25 +10,21 @@ if (!$yhteys){
     header("Location:error.html");
     exit;
 }
-$tietokanta=mysqli_select_db($yhteys, "trtkp20a3");
 
-if (!$tietokanta){
+$ok=mysqli_select_db($yhteys, "trtkp20a3");
+
+if (!$ok){
     header("Location:error.html");
     exit;
 } 
 
-$sql="select * from elina19161_tunnukset where username=? and password=md5(?)";
-$stmt=mysqli_prepare($yhteys, $sql);
-mysqli_stmt_bind_param($stmt, "ss", $username, $password);
-mysqli_stmt_execute($stmt);
-$tulos=mysqli_stmt_get_result($stmt);
+$tulos=mysqli_query($yhteys, "select * from user where tunnus='$username' and salasana=' ".md5($password). "'");
 
-if ($rivi=mysqli_fetch_object($tulos)){
-    $_SESSION["user_ok"]="ok";
-    header("Location:".$_SESSION["paluuosoite"]);
+if ($tulos){
+    $_SESSION["user"]="OK";
+    header("Location:profile.html");
     exit;
 }
-else{
-	header("Location:login.html");
-} 
-?> 
+header("Location:login.html");
+
+?>
