@@ -18,7 +18,7 @@ if (!$ok){
     exit;
 } 
 
-$tulos=mysqli_query($yhteys, "select * from user where tunnus='$username' and salasana=' ".md5($password). "'");
+$tulos=mysqli_query($yhteys, "select * from elina19161_tunnukset where tunnus='".$username."' and salasana='".md5($password)."'");
 
 if ($tulos){
     $_SESSION["user"]="OK";
